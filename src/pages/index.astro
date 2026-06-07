@@ -115,6 +115,41 @@ const exploring = [
   'Multimodal assessment signals — reading the process a student followed, not just the final artefact.',
   'Local-first as the default for education as subscription and token costs climb.',
 ];
+
+// JSON-LD Person entity. Shared @id with borck.dev consolidates the scattered
+// estate into one entity for search + AI answer engines. borck.consulting is
+// intentionally omitted (kept separate). Add an ORCID to sameAs if you have one.
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://borck.dev/#michael-borck',
+  name: 'Michael Borck',
+  givenName: 'Michael',
+  familyName: 'Borck',
+  url: 'https://bigpicture.borck.dev',
+  jobTitle: 'Lecturer & AI Facilitator',
+  worksFor: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Curtin University',
+    department: 'School of Marketing and Management, Faculty of Business and Law',
+  },
+  knowsAbout: [
+    'AI in education', 'privacy-first AI', 'local language models',
+    'assessment design', 'educational technology', 'work-integrated learning',
+  ],
+  sameAs: [
+    'https://borck.dev',
+    'https://borck.education',
+    'https://tools.borck.education',
+    'https://books.borck.education',
+    'https://research.borck.dev',
+    'https://locolabo.org',
+    'https://locoensayo.org',
+    'https://conversationnotdelegation.com',
+    'https://github.com/michael-borck',
+    'https://www.linkedin.com/in/michaelborck',
+  ],
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -142,6 +177,9 @@ const exploring = [
   <meta name="twitter:title" content="Michael Borck — the big picture" />
   <meta name="twitter:description" content="The AI teaching, tools, and research I've built at Curtin. Conversation, not Delegation." />
   <meta name="twitter:image" content="https://bigpicture.borck.dev/og.png" />
+
+  <!-- Person entity for search + AI answer engines -->
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 </head>
 <body>
 
