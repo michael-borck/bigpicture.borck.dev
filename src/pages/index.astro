@@ -1,0 +1,179 @@
+---
+import '../styles/global.css';
+
+const work = [
+  {
+    kicker: 'Teaching & curriculum',
+    title: 'Rebuilding what I teach — in the open',
+    body: 'Six units retooled and two postgraduate degrees plus three executive courses built to use AI transparently and ethically — from first-year programming to executive strategy.',
+    honest: "The hard part isn't the tech; it's operationalising “transparent and ethical” in a live unit. Some of it I got wrong first.",
+    href: 'https://borck.education', dest: 'borck.education',
+  },
+  {
+    kicker: 'Local-AI research',
+    title: 'Frontier-style AI on a budget, built at Curtin',
+    body: 'An applied AI research lab running on secondhand hardware — so we can do real local-AI research without student data ever leaving the building.',
+    honest: 'Secondhand GPUs come with a tax: driver traps, mismatched machines, a power supply sized one notch too small.',
+    href: 'https://locolabo.org', dest: 'locolabo.org',
+  },
+  {
+    kicker: 'Tools for students',
+    title: 'AI you can actually recommend to students',
+    body: 'Small desktop apps that each do one job — spoken-conversation practice, a tutor that won’t just give the answer, private career exploration — running on the student’s own laptop.',
+    honest: 'A desktop app is a little more setup than a website. The trade is genuine data sovereignty.',
+    href: 'https://tools.borck.education', dest: 'tools.borck.education',
+  },
+  {
+    kicker: 'Tools for teaching staff',
+    title: 'An AI assistant for the whole teaching lifecycle',
+    body: 'Design a unit, audit it for accessibility, give rubric-aligned feedback, and close the loop on student surveys — privately, on your own machine.',
+    honest: 'Each tool owns one job on purpose. No all-in-one platform to wrangle, no procurement battle.',
+    href: 'https://tools.borck.education', dest: 'tools.borck.education',
+  },
+  {
+    kicker: 'Assessment at scale',
+    title: 'Signals, not scores',
+    body: 'AI reads what students submit — essays, code, presentations, even drafting history — and maps it to your rubric. You keep every judgment. It scales to large cohorts.',
+    honest: 'The AI never grades. It points; the human decides. That boundary is the whole design.',
+    href: 'https://github.com/michael-borck', dest: 'github.com/michael-borck',
+  },
+  {
+    kicker: 'Governance',
+    title: 'AI in teaching without sending data anywhere',
+    body: 'The case — and the tools — for small, privacy-first AI that runs locally. As subscription and token costs climb, local-first is increasingly the sensible default.',
+    honest: 'Local models are genuinely worse at frontier tasks. For conversation and governance, they’re more than enough.',
+    href: 'https://locolabo.org', dest: 'locolabo.org',
+  },
+  {
+    kicker: 'The role',
+    title: 'A year as a school’s first AI facilitator',
+    body: 'Honest reflections on what it actually takes to help colleagues use AI well — what worked, what flopped, and what the role needs to look like at scale.',
+    honest: 'A single embedded person doesn’t scale — and some of what worked, worked because it was one trusted person in the corridor.',
+    href: 'https://borck.education', dest: 'borck.education',
+  },
+  {
+    kicker: 'Building method',
+    title: 'What AI lets one academic build — and where it breaks',
+    body: 'Roughly thirty tools shipped solo, in conversation with AI. A working method, and an honest account of the failure modes.',
+    honest: "“I shipped thirty things” becomes “I maintain thirty unmaintained things” without discipline.",
+    href: 'https://github.com/michael-borck', dest: 'github.com/michael-borck',
+  },
+  {
+    kicker: 'Authoring',
+    title: 'Books written the way I tell students to',
+    body: 'Framework books and a verb-by-verb Python series — published, open-licensed, and usable in your own units.',
+    honest: 'AI made it possible; the places it would’ve quietly degraded the book are exactly the places that make a book worth reading.',
+    href: 'https://books.borck.education', dest: 'books.borck.education',
+  },
+  {
+    kicker: 'Simulations',
+    title: 'Rehearse the situation before the situation',
+    body: 'A platform that generates realistic workplace simulations — a company, AI “employees”, real tasks — so students can rehearse before a placement or capstone, at scale.',
+    honest: "A simulation isn’t the real thing. But practice is practice, and rehearsed students show up ready.",
+    href: 'https://locolabo.org', dest: 'locolabo.org',
+  },
+];
+
+const collab = [
+  { name: 'Keep Asking', desc: 'What ~15,000 student–AI conversations taught us — with colleagues across Marketing, Supply Chain, and People & Culture.' },
+  { name: 'UDL Lens', desc: 'Accessibility auditing of assessments, with Luke Butcher — AI drafts, the academic decides.' },
+  { name: 'The AI Skills Passport', desc: 'Self-paced AI literacy, adopted and told from a staff user’s point of view.' },
+  { name: 'WorkReady', desc: 'An internship-rehearsal simulation, led by its project lead in the School of Marketing & Management.' },
+  { name: 'Career Compass', desc: 'Privacy-first career exploration, fronted by the careers / People & Culture team.' },
+];
+
+const exploring = [
+  'Small local models as genuine thinking partners — engineered for variance, not just precision.',
+  'A capstone where students ship real, specialised AI and leave with it on their résumé.',
+  'Multimodal assessment signals — reading the process a student followed, not just the final artefact.',
+  'Local-first as the default for education as subscription and token costs climb.',
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michael Borck — the big picture</title>
+  <meta name="description" content="A map of the AI teaching, tools, and research Michael Borck has built at Curtin — what it's for, who it helps, and what he learned (including what didn't work)." />
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+
+<div class="corner"><a href="https://borck.dev">&larr; borck<span class="tld">.dev</span></a></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Michael Borck &middot; Lecturer &amp; AI Facilitator &middot; Curtin University</div>
+    <h1>Conversation, <span class="accent">not Delegation</span></h1>
+    <div class="h1sub">a way of working with AI &mdash; and the teaching, tools, and research built to live it out</div>
+    <p class="lede">AI should amplify human thinking, not replace it. This is a map of what I&rsquo;ve built and taught at Curtin to put that into practice &mdash; small, honest, privacy-first, and useful to the people who&rsquo;ll actually use it.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">See the work &darr;</a>
+      <a class="btn ghost" href="https://conversationnotdelegation.com">The idea behind it</a>
+    </div>
+  </div>
+</header>
+
+<div class="about">
+  <div class="wrap">
+    This is a map, not a brochure. Each entry leads with <strong>what it&rsquo;s for and who it helps</strong>, says honestly <strong>what didn&rsquo;t work</strong>, and links to the real thing.
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sechead"><h2>The work</h2><span class="count">// ten threads, one idea</span></div>
+    <div class="grid">
+      {work.map((w) => (
+        <a class="card" href={w.href}>
+          <div class="kicker">{w.kicker}</div>
+          <h3>{w.title}</h3>
+          <p>{w.body}</p>
+          <div class="honest">{w.honest}</div>
+          <div class="go">{w.dest} &rarr;</div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="collab">
+  <div class="wrap">
+    <div class="sechead"><h2>Built with colleagues &middot; used across Curtin</h2></div>
+    <p class="secintro">The best of this work isn&rsquo;t mine alone &mdash; it&rsquo;s co-taught, adopted, and fronted by the people who use it. That&rsquo;s the point.</p>
+    <ul class="collablist">
+      {collab.map((c) => (
+        <li><b>{c.name}</b><span>{c.desc}</span></li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<section class="explore">
+  <div class="wrap">
+    <div class="sechead"><h2>What I&rsquo;m exploring now</h2></div>
+    <ul>
+      {exploring.map((e) => (<li>{e}</li>))}
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>Michael Borck</strong> &middot; Lecturer &amp; AI Facilitator &middot; School of Marketing and Management (SoMM), Faculty of Business and Law, Curtin University
+    <div class="flinks">
+      <a href="https://borck.dev">borck.dev</a>
+      <a href="https://borck.education">borck.education</a>
+      <a href="https://tools.borck.education">tools.borck.education</a>
+      <a href="https://books.borck.education">books.borck.education</a>
+      <a href="https://locolabo.org">locolabo.org</a>
+      <a href="https://github.com/michael-borck">github</a>
+      <a href="mailto:michael.borck@curtin.edu.au">email</a>
+    </div>
+    <p class="fine">The map, not the territory &mdash; every link goes to the real thing. Built in conversation with AI, of course.</p>
+  </div>
+</footer>
+
+</body>
+</html>
