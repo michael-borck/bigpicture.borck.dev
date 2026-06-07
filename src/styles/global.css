@@ -111,4 +111,31 @@ footer { border-top: 1px solid var(--gray-3); padding: 2.4rem 0 3.2rem; color: v
 .flinks a:hover { color: var(--accent); }
 .fine { font-size: .8rem; color: var(--gray-2); }
 
+/* card-as-button reset (cards open a detail dialog) */
+button.card { font: inherit; text-align: left; cursor: pointer; width: 100%; color: inherit; }
+
+/* ── detail dialog ── */
+dialog.sheet {
+  border: none; padding: 0; border-radius: 16px;
+  background: var(--panel-2); color: var(--text);
+  max-width: 560px; width: calc(100% - 2rem);
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,.75);
+}
+dialog.sheet::backdrop { background: rgba(6,7,10,.72); backdrop-filter: blur(3px); }
+.sheet-inner { position: relative; padding: 1.9rem; }
+.sheet .kicker { margin-bottom: .4rem; }
+.sheet h3 { font-size: 1.45rem; letter-spacing: -.01em; line-height: 1.2; margin: .1rem 0; color: var(--text); }
+.sheet .blurb { color: #c9c7c3; font-size: 1.02rem; line-height: 1.62; margin: .8rem 0 0; }
+.sheet-links { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.4rem; }
+.sheet-links a {
+  display: inline-block; padding: .5rem .9rem; border: 1px solid var(--gray-3);
+  border-radius: 9px; font-family: var(--mono); font-size: .78rem; color: var(--text);
+}
+.sheet-links a:hover { border-color: var(--accent); color: var(--accent-2); }
+.sheet-close {
+  position: absolute; top: .6rem; right: .7rem; background: none; border: none;
+  color: var(--gray-1); font-size: 1.7rem; line-height: 1; cursor: pointer; padding: .15rem .45rem; border-radius: 8px;
+}
+.sheet-close:hover { color: var(--text); background: var(--gray-3); }
+
 @media (max-width: 640px) { .hero { padding: 5.5rem 0 2.5rem; } }
