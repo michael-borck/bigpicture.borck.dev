@@ -120,6 +120,10 @@ dialog.sheet {
   background: var(--panel-2); color: var(--text);
   max-width: 560px; width: calc(100% - 2rem);
   box-shadow: 0 30px 80px -20px rgba(0,0,0,.75);
+  /* centre it: the global `* { margin: 0 }` reset kills the dialog's default
+     margin:auto, so restore it explicitly. inset:0 + margin:auto = centred. */
+  position: fixed; inset: 0; margin: auto;
+  max-height: calc(100vh - 3rem); overflow: auto;
 }
 dialog.sheet::backdrop { background: rgba(6,7,10,.72); backdrop-filter: blur(3px); }
 .sheet-inner { position: relative; padding: 1.9rem; }
