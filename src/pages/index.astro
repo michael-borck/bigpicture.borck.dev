@@ -14,6 +14,14 @@ const work = [
     links: [{ label: 'borck.education', href: 'https://borck.education' }],
   },
   {
+    kicker: 'Ethics in practice',
+    title: "The line the AI doesn't cross",
+    body: 'Every tool draws the same boundary in a different place: the AI assists, the human keeps the judgment. Transparent use, declared openly, on both sides of the desk.',
+    honest: "Saying “transparent and ethical” is easy. The hard part is deciding, tool by tool, exactly where the AI has to stop.",
+    blurb: "This is the spine the rest of the work hangs on, made concrete rather than just stated. The teaching runs on one rule: if students can use AI they are told how, and I am honest about my own use too. FeedForward releases feedback the academic owns, and the AI never edits student work. Signals, not scores points at evidence and never assigns the mark. Document Lens is reproducible by design, not a chatbot you have to trust. The pattern is always the same, AI assists at the boundary and the human keeps the judgment, which is the whole of Conversation, not Delegation.",
+    links: [{ label: 'conversationnotdelegation.com', href: 'https://conversationnotdelegation.com' }],
+  },
+  {
     kicker: 'Local-AI research',
     title: 'Frontier-style AI on a budget, built at Curtin',
     body: 'An applied AI research lab running on secondhand hardware, so we can do real local-AI research without student data ever leaving the building.',
@@ -97,6 +105,17 @@ const work = [
     links: [
       { label: 'locoensayo.org', href: 'https://locoensayo.org' },
       { label: 'simulations.borck.education', href: 'https://simulations.borck.education/' },
+    ],
+  },
+  {
+    kicker: 'Open by default',
+    title: 'Built to give away',
+    body: 'Free, open-licensed, and on GitHub by default. No logins, no telemetry, no procurement battle: take it and run it in your own unit.',
+    honest: "Open-sourcing thirty things is easy. Keeping them documented and alive enough that someone else can actually adopt them is the real work.",
+    blurb: "Almost everything here is free, MIT-licensed, and public on GitHub: the tools, the teaching package, the simulation platform, the books. The point isn't generosity for its own sake. Open and local-first is what clears the institutional bar, with no procurement, no shared cloud database, and no data leaving the machine. It also keeps me honest: if a colleague can read the code and run it themselves, the work has to actually hold up. The polished subset lives on the tools site; the raw portfolio is on GitHub.",
+    links: [
+      { label: 'github.com/michael-borck', href: GH },
+      { label: 'tools.borck.education', href: TOOLS },
     ],
   },
 ];
@@ -211,7 +230,7 @@ const personSchema = {
 
 <section id="work">
   <div class="wrap">
-    <div class="sechead"><h2>The work</h2><span class="count">// ten threads, one idea</span></div>
+    <div class="sechead"><h2>The work</h2><span class="count">// twelve threads, one idea</span></div>
     <div class="grid">
       {work.map((w, i) => (
         <button type="button" class="card" data-dialog={`d${i}`} aria-haspopup="dialog">
