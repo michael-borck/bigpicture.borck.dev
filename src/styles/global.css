@@ -94,13 +94,15 @@ section { padding: 3.4rem 0; }
 
 /* ── collaborations ── */
 .collab { background: #0d0e12; border-top: 1px solid var(--gray-3); border-bottom: 1px solid var(--gray-3); }
-.collablist { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: .9rem; margin-top: .3rem; }
+.collablist { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: .9rem; margin-top: .3rem; }
+@media (max-width: 860px) { .collablist { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .collablist { grid-template-columns: 1fr; } }
 .collablist li { background: var(--panel); border: 1px solid var(--gray-3); border-radius: 12px; padding: 1rem 1.1rem; }
 .collablist b { display: block; margin-bottom: .25rem; color: var(--text); }
 .collablist span { color: var(--gray-1); font-size: .9rem; }
 
 /* ── exploring ── */
-.explore ul { list-style: none; display: grid; gap: .65rem; max-width: 46rem; }
+.explore ul { list-style: none; display: grid; gap: .65rem; }
 .explore li { padding-left: 1.5rem; position: relative; color: #b9b7b3; }
 .explore li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
 
